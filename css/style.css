@@ -1,0 +1,1690 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+.all{
+    width: 100vw;
+    overflow: hidden;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd,a,figure,img{
+    margin: 0;
+    padding: 0;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd,li,a{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    font-weight: 400;
+}
+h1{
+    font-size: 46px;
+    font-weight: 500;
+}
+h2{
+    font-size: 26px;
+    font-weight: 500;
+}
+h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+ul,ol,dl,dt,dd{
+    list-style-type: none;
+}
+img{
+    vertical-align: bottom;
+    border: none;
+}
+/*ヘッダー*/
+header{
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+}
+.header-inner{
+    line-height: 50px;
+    text-align: center;
+}
+.header-inner img{
+    vertical-align: middle;
+    width: 200px;
+    height: auto;
+}
+/*ファーストビュー*/
+.top{
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+}
+.top-bg{
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    height: 110vh;
+}
+.top-bg img{
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+.top-inner{
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    left: 5%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.top-text{
+    width: 60vw;
+}
+.top-text h1{
+    color: #fff;
+}
+.top-text img{
+    padding-top: 40px;
+    width: 180px;
+}
+.top-text .text p{
+    line-height: 2.2em;
+    padding-top: 16px;
+    padding-left: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+.top-text strong{
+    font-size: 28px;
+}
+.top-briefing{
+    width: 30vw;
+    background-color: hsla(0,0%,100%,.9);
+    padding: 10px 15px 20px;
+    z-index: 40;
+}
+.top-briefing h3{
+    margin: 25px 0 0 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+.top-briefing h3:before{
+    content: "";
+    display: block;
+    background: linear-gradient(90deg,#002e4b,#2e415a);
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: -1rem;
+}
+.top-briefing p{
+    line-height: 1.8;
+    padding: 1vw 0 2vw;
+    color: #4d4d4d;
+}
+.btn-briefing{
+    width: 100%;
+    background-color: #de6071;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 1px rgba(0,0,0,.3);
+    transition: .3s;
+}
+.btn-briefing a{
+    color: #fff;
+    width: 100%;
+    display: block;
+    padding: .8rem 2rem;
+}
+.btn-briefing:hover{
+    transition: .3s;
+    opacity: 0.85;
+}
+.top-btn{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80vh;
+}
+.top-btn a{
+    overflow: hidden;
+    font-size: 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50em;
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 20px 45px;
+    transition: .3s;
+}
+.top-btn a:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #C1B170;
+    transition: .3s;
+}
+.top-btn a:hover{
+    color: #fff;
+    transition: .3s;
+    border: 2px solid #C1B170;
+}
+.top-btn a:hover:before{
+    left: 0;
+}
+
+.space{
+    width: 100vw;
+    height: 110vh;
+    background-color: #EBF2EF;
+}
+/*セクション共通*/
+.sec-inner{
+    width: 80vw;
+    margin: 0 auto;
+}
+.h2{
+    width: 80vw;
+    margin: 80px auto 80px;
+    text-align: center;
+}
+.h2-en{
+    color: #ACBFBC;
+    font-size:16px;
+    padding-bottom: 10px;
+    letter-spacing: 0.17em;
+}
+.h2 h2{
+    font-size: 26px;
+}
+/*セクション1(こんな方におすすめ)*/
+.sec01{
+    background-color: #EBF2EF;
+    padding: 100px 0;
+}
+.sec01-inner{
+    background-color: #fff;
+    padding-top: 80px;
+    box-shadow: 3px 3px 6px #B7B7B7;
+}
+.sec01 .arrow-box{
+    position:relative;
+    width:300px;
+    height:60px;
+    margin: 0 auto;
+    background:#C6AB39;
+    padding:10px;
+    text-align:center;
+    border-radius:13px;
+    -webkit-border-radius:13px;
+    -moz-border-radius:13px;
+}
+.sec01 .arrow-box:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(198, 171, 57, 0);
+    border-top-width:17px;
+    border-bottom-width:17px;
+    border-left-width:10px;
+    border-right-width:10px;
+    margin-left: -10px;
+    border-top-color:#C6AB39;
+    top:100%;
+    left:50%;
+}
+.sec01 h2{
+    line-height: 38px;
+    color: #fff;
+    font-size: 18px;
+}
+.fukidashi{
+    width: 50px;
+    margin: 0 auto 15px;
+}
+.fukidashi img{
+    width: 100%;
+    height: auto;
+}
+.sec01 .flex{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.sec01 .box{
+    width: 30%;
+}
+.sec01 .box figure{
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+.sec01 .box img{
+    width: 100%;
+}
+.sec01 .box .text{
+    padding: 40px 30px;
+    text-align: center;
+    line-height: 1.8em;
+}
+.sec01 .box .text .strong{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.sec01 .box .line{
+    width: 80px;
+    height: 4px;
+    border-radius: 50em;
+    background-color: #C6AB39;
+    margin: 10px auto 0;
+}
+.sec01 .box .line-before{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+/*セクション2(スキル)*/
+.sec02-inner{
+    padding-top: 100px;
+}
+.sec02 .goal{
+    color: #46685E;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+.sec02 .line{
+    margin: 30px auto 0;
+    width: 230px;
+    height: 6px;
+    border-radius: 50em;
+    background-color: #C6AB39;
+}
+.sec02 .skill-area{
+    width: 100%;
+}
+.sec02 .skill{
+    position: relative;
+    width: 70%;
+    padding-bottom: 40px;
+    height: 160px;
+}
+.sec02 .skill-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-20deg);
+}
+.skill-1 .skill-bg,.skill-3 .skill-bg{
+    background-color: #DAE5E1;
+}
+.skill-2 .skill-bg{
+    background-color: #EDF2F0;
+}
+.sec02 .skill-1{
+    margin-left: 0;
+}
+.sec02 .skill-2{
+    margin-left: 15%;
+    margin-top: 30px;
+}
+.sec02 .skill-3{
+    margin-left: 30%;
+    margin-top: 30px;
+}
+.sec02 .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    padding: 10px 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sec02 .h3-area{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec02 h3{
+    font-size: 72px;
+    color: #C6AB39;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1em;
+    margin-top: -60px;
+}
+.sec02 h3 span{
+    font-size: 14px;
+    line-height: 14px;
+}
+.sec02 .slash-outer{
+    width: 10%;
+}
+.sec02 .slash{
+    margin: 0 auto;
+    width: 7px;
+    height: 100px;
+    background-color: #C6AB39;
+    transform: rotate(20deg);
+}
+.sec02 .content .text{
+    width: 40vw;
+    padding-left: 5%;
+}
+.sec02 .content .text strong{
+    font-size: 24px;
+    font-weight: 700;
+    color: #46685E;
+}
+/*セクション3(問題提起・解決)*/
+.sec03 .image-sp{
+    display: none;
+}
+.sec03{
+    width: 100vw;
+    background-color: #EDF2F0;
+    margin-top: 200px;
+}
+.sec03 .flex{
+    display: flex;
+    width: 90vw;
+    height: 450px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.sec03 .flex .text{
+    width: 40vw;
+    padding-top: 60px;
+}
+.sec03 .flex .image{
+    width: 50vw;
+    height: 450px;
+    overflow: hidden;
+}
+.sec03 .flex .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+.sec03 .flex-1{
+    margin-left: 10vw;
+}
+.sec03 .flex-1 .text{
+    padding-right: 60px;
+}
+.sec03 .flex-2{
+    margin-left: 0;
+}
+.sec03 .flex-2 .text{
+    padding-left: 60px;
+}
+.sec03 h3{
+    color: #46685E;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.sec03 li{
+    line-height: 2.5em;
+}
+.sec03 li p:before{
+	content:"";
+	display:inline-block;
+	width:1.2em;
+	height:1.2em;
+	background:url(../img/check.svg) no-repeat;
+	background-size:contain;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+.sec03 .solution{
+    color: #46685E;
+    font-size: 22px;
+    line-height: 2.5em;
+    font-weight: 500;
+}
+.sec03 .solution strong{
+    font-size: 26px;
+    color: #fff;
+    background-color: #46685E;
+    letter-spacing: 0.12em;
+    padding: 0 10px;
+}
+/*セクション4(3つのポイント)*/
+.sec04{
+    width: 100vw;
+}
+.sec04 .flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+.sec04 .box{
+    padding: 30px 1% 60px;
+}
+.sec04 .title,.sec04 .text{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.sec04 .box-1,.sec04 .box-3{
+    width: 34%;
+    background-color: #DAE5E1;
+}
+.sec04 .box-2{
+    width: 32%;
+    background-color: #EDF2F0;
+}
+.sec04 h3{
+    font-size: 16px;
+    text-align: center;
+}
+.sec04 h3 span{
+    font-size: 72px;
+}
+.sec04 .box-1 h3,.sec04 .box-3 h3{
+    color: #46685E;
+}
+.sec04 .box-2 h3{
+    color: #C6AB39;
+}
+.sec04 .arrow-box{
+    color: #fff;
+    position:relative;
+    width:260px;
+    height:75px;
+    margin: 20px auto 0;
+    background:#46685E;
+    padding:10px;
+    text-align:center;
+    border-radius:13px;
+    -webkit-border-radius:13px;
+    -moz-border-radius:13px;
+}
+.sec04 .arrow-box:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(198, 171, 57, 0);
+    border-top-width:17px;
+    border-bottom-width:17px;
+    border-left-width:10px;
+    border-right-width:10px;
+    margin-left: -10px;
+    border-top-color:#46685E;
+    top:100%;
+    left:50%;
+}
+.sec04 .box-2 .arrow-box{
+    background: #C6AB39;
+}
+.sec04 .box-2 .arrow-box:after{
+    border-top-color: #C6AB39;
+}
+.sec04 figure{
+    width: 110px;
+    height: 110px;
+    margin: 50px auto;
+}
+.sec04 img{
+    width: 100%;
+    height: auto;
+}
+.sec04 .title{
+    color: #46685E;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.sec04 .text{
+    padding-top: 30px;
+    text-align: center;
+}
+/*セクション5(メディア掲載実績)*/
+.sec05{
+    width: 100vw;
+    background-color: #5A9388;
+    padding: 100px 0;
+}
+.sec05 .h2{
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.sec05 h2,.sec05 .sec-text{
+    color: #fff;
+    text-align: center;
+}
+.sec05 .flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+.sec05 .flex .box{
+    width: 45%;
+    background-color: #fff;
+    box-shadow: 3px 3px 6px #4C5B58;
+}
+.sec05 .flex figure{
+    width: 100%;
+}
+.sec05 .flex img{
+    width: 99%;
+    border-bottom: 1px solid gray;
+}
+.sec05 .media-title, .sec05 .media-text{
+    padding: 20px 30px;
+}
+.sec05 .media-title p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.sec05 .line{
+    margin-left: 30px;
+    width: 100px;
+    height: 6px;
+    border-radius: 50em;
+    background-color: #C6AB39;
+}
+.sec05 .media-text{
+    padding-bottom: 70px;
+}
+/*セクション6,8共通(講座について&講師紹介)*/
+.common-flex{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.common-flex figure{
+    width: 45%;
+}
+.common-flex img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.common-flex .content{
+    width: 55%;
+    background-color: #EDF2F0;
+}
+.common-flex h3{
+    background-color: #C6AB39;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+.common-flex .text{
+    padding: 10%;
+}
+/*セクション6(講座について)*/
+.sec06 dt{
+    float: left;
+    line-height: 2.8em;
+    font-weight: 500;
+}
+.sec06 dd{
+    margin-left: 150px;
+    line-height: 2.8em;
+}
+/*セクション7(カリキュラム)*/
+.sec07 .flex ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.sec07 .flex li{
+    line-height: 64px;
+    width: 23%;
+    text-align: center;
+    background-color: #ACBFBB;
+    border-radius: 10px;
+    transition: .3s;
+}
+.sec07 .flex li:hover{
+    background-color: #5A9388;
+    transition: .3s;
+}
+.sec07 .flex a{
+    font-size: 32px;
+    color: #fff;
+    width: 100%;
+    display: block;
+}
+.sec07 .content{
+    width: 100%;
+    margin-top: 60px;
+    background-color: #EDF2F0;
+}
+.sec07 .content-inner{
+    padding: 7% 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.sec07 .title{
+    text-align: right;
+    width: 40%;
+    padding: 0 4%;
+}
+.sec07 .title h3,.sec07 .title p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.sec07 h3{
+    margin-bottom: 30px;
+}
+.sec07 .text{
+    width: 60%;
+    padding: 0 4%;
+    border-left: 2px solid #C6AB39;
+    position: relative;
+}
+.sec07 .circle{
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #C6AB39;
+    border-radius: 50em;
+}
+.sec07 .text dt{
+    float: left;
+    line-height: 2.5em;
+}
+.sec07 .text dd{
+    margin-left: 100px;
+    line-height: 2.5em;
+}
+.sec07 .hide{
+    display: none;
+}
+.sec07 .tab .select{
+    background-color: #5A9388;
+    position: relative;
+}
+.sec07 .tab .select:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(198, 171, 57, 0);
+    border-top-width:17px;
+    border-bottom-width:17px;
+    border-left-width:10px;
+    border-right-width:10px;
+    margin-left: -10px;
+    border-top-color:#5A9388;
+    top:100%;
+    left:50%;
+}
+/*セクション8(講師紹介)*/
+.sec08 .lecturer-sp{
+    display: none;
+}
+/*セクション9(受講資格・予襲復讐)*/
+.sec09{
+    width: 100%;
+    margin-top: 200px;
+}
+.sec09 .flex{
+    display: flex;
+    justify-content: space-between;
+}
+.sec09 .box{
+    width: 40%;
+    text-align: center;
+    background-color: #EDF2F0;
+    padding: 5%;
+    border-radius: 70px;
+    box-shadow: 3px 3px 6px #B7B7B7;
+}
+.sec09 .box figure{
+    margin: 40px auto;
+    width: 160px;
+    height: 140px;
+}
+.sec09 .box img{
+    width: 100%;
+}
+.sec09 .arrow-box{
+    color: #fff;
+    position:relative;
+    width:270px;
+    height:55px;
+    margin: 20px auto 0;
+    background:#46685E;
+    padding:13px;
+    text-align:center;
+    border-radius:13px;
+    -webkit-border-radius:13px;
+    -moz-border-radius:13px;
+}
+.sec09 .arrow-box:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(198, 171, 57, 0);
+    border-top-width:17px;
+    border-bottom-width:17px;
+    border-left-width:10px;
+    border-right-width:10px;
+    margin-left: -10px;
+    border-top-color:#46685E;
+    top:100%;
+    left:50%;
+}
+.sec09 h3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.sec09 .text{
+    font-weight: 500;
+}
+.sec09 .ps{
+    padding-top: 20px;
+    font-size: 12px;
+}
+/*セクション10(サポート体制)*/
+.sec10 .h2 h2{
+    color: #fff;
+}
+.sec10-inner{
+    width: 100vw;
+    margin-top: 200px;
+}
+.sec10 .flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.sec10 figure{
+    width: 50%;
+}
+.sec10 figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec10 .content{
+    width: 50%;
+    background-color: #5A9388;
+}
+.sec10 .content-inner{
+    width: 40vw;
+    margin-right: 10vw;
+}
+.sec10 .h2{
+    width: 40vw;
+    margin: 80px auto 80px;
+    text-align: center;
+}
+.sec10 .support{
+    background-color: #EDF2F0;
+    display: flex;
+    margin-left: -20%;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 6px #4C5B58;
+}
+.sec10 .icon{
+    padding: 30px;
+    width: 30%;
+    height: 120px;
+    background-color: #C6AB39;
+}
+.sec10 .icon img{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+}
+.sec10 .text{
+    width: 90%;
+    padding: 5%;
+}
+/*セクション11（キャペーン）*/
+.sec11 .flex{
+    width: 100%;
+    margin-top: 100px;
+    padding:80px 0;
+    border-radius: 30px;
+    background-color: #E88069;
+    display: flex;
+    justify-content: space-between;
+}
+.sec11 h3,.sec11 .text p{
+    color: #fff;
+}
+.sec11 h3,.sec11 .text,.sec11 .date{
+    text-align: center;
+}
+.sec11 h3 span{
+    font-size: 40px;
+}
+.sec11 h3 strong{
+    font-size: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sec11 .date{
+    background-color: #F8F8F8;
+    width: 330px;
+    margin: 20px auto 60px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+}
+.sec11 .date p{
+    color: #E88069;
+    font-size: 22px;
+    font-weight: 500;
+}
+.sec11 .illust{
+    width: 280px;
+    text-align: center;
+}
+.sec11 .illust-1{
+    margin: 0 auto 0 -40px;
+    width: 280px;
+}
+.sec11 .illust-2{
+    margin: 0 -40px 0 auto;
+    width: 180px;
+}
+.sec11 img{
+    width: 100%;
+    height: auto;
+}
+.sec11 .inner-flex,.sec11 h3 .br-sp{
+    display: none;
+}
+/*セクション12(料金)*/
+.sec12{
+    width: 100%;
+    background-color: #DAE5E1;
+    padding-bottom: 80px;
+}
+.sec12 .h2{
+    padding-top: 80px;
+}
+.sec12 dl{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.sec12 dt{
+    float: left;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 60px;
+    color: #fff;
+    background-color: #C6AB39;
+    width: 150px;
+    text-align: center;
+    border-top-left-radius: 50em;
+    border-bottom-left-radius: 50em;
+    margin-bottom: 20px;
+}
+.sec12 dd{
+    margin-left: 150px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-top-right-radius: 50em;
+    border-bottom-right-radius: 50em;
+}
+.sec12 .btn-reserve{
+    text-align: center;
+    margin: 100px auto 0;
+    width: 320px;
+    position: relative;
+    z-index: 0;
+}
+.sec12 .btn-reserve a{
+    color: #5A9388;
+    border: 2px solid #5A9388;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50em;
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+.sec12 .btn-reserve a:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #5A9388;
+    transition: .3s;
+}
+.sec12 .btn-reserve a:hover{
+    color: #fff;
+    transition: .3s;
+    border: 2px solid #5A9388;
+}
+.sec12 .btn-reserve a:hover:before{
+    left: 0;
+    transition: .3s;
+}
+
+/*セクション13(FAQ)*/
+.sec13 dl{
+    width: 100%;
+}
+.sec13 dt:before{
+    content: "Q.";
+    color: #4ABCA6;
+    font-size: 30px;
+    font-weight: 500;
+    padding-right: 20px;
+}
+.sec13 dt{
+    margin-left: 3em;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 60px;
+    text-indent: -3em;
+}
+.sec13 dd:before{
+    content: "A.";
+    color: #D3635E;
+    font-size: 30px;
+    font-weight: 500;
+    padding-right: 20px;
+}
+.sec13 dd{
+    margin-left: 3em;
+    text-indent: -3em;
+}
+.sec13 dl{
+    position: relative;
+}
+.sec13 dl+dl:before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin: 30px auto;
+    background-color: #DAE5E1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*セクション14(お申し込みの流れ)*/
+.sec14{
+    width: 100%;
+    background-color: #DAE5E1;
+    padding-bottom: 100px;
+}
+.sec14 .h2{
+    padding: 80px 0 80px;
+}
+.sec14 .content{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.sec14 .flow-line{
+    position: absolute;
+    width: 4px;
+    height: 570px;
+    background-color: #C6AB39;
+    top: 50px;
+    left: 50px;
+    z-index: 0;
+}
+.sec14 .box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 5;
+}
+.sec14 .number{
+    width: 15%;
+    text-align: center;
+}
+.sec14 .number p{
+    padding-top: 10px;
+    line-height: 2.0em;
+    background-color: #C6AB39;
+    width: 100px;
+    height: 100px;
+    border-radius: 50em;
+    color: #fff;
+}
+.sec14 span{
+    font-size: 40px;
+}
+.sec14 .text{
+    width: 85%;
+    padding-left: 100px;
+}
+.sec14 .btn-reserve{
+    text-align: center;
+    margin: 20px 0 0 0;
+    width: 300px;
+    position: relative;
+    z-index: 0;
+}
+.sec14 .btn-reserve a{
+    font-size: 16px;
+    color: #5A9388;
+    border: 2px solid #5A9388;
+    display:block;
+    padding: 10px;
+    border-radius: 50em;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+.sec14 .btn-reserve a:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #5A9388;
+    transition: .3s;
+}
+.sec14 .btn-reserve a:hover{
+    color: #fff;
+    transition: .3s;
+    border: 2px solid #5A9388;
+}
+.sec14 .btn-reserve a:hover:before{
+    left: 0;
+    transition: .3s;
+}
+.sec14 .btn-apply{
+    width: 200px;
+}
+.sec14 .btn-apply a{
+    color: #C6AB39;
+    border: 2px solid #C6AB39;
+}
+.sec14 .btn-apply a:before{
+    background-color: #C6AB39;
+}
+.sec14 .btn-apply a:hover{
+    border: 2px solid #C6AB39;
+}
+/*セクション15(お申し込みフォーム)*/
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+textarea {
+  resize: vertical;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+.sec15 .form{
+    width: 60%;
+    margin: 0 auto;
+}
+.sec15 .flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.sec15 .flex .title{
+    width: 30%;
+}
+.sec15 .flex .title p{
+    font-weight: 500;
+}
+.sec15 .flex form{
+    width: 70%;
+}
+.sec15 .form-area{
+    width: 100%;
+    padding: 0.3em 10px;
+    margin-bottom: 13px;
+    border-radius: 5px;
+    border: 2px solid #ADBCB6;
+}
+.sec15 .form-area:focus{
+    border: 2px solid #C6AB39;
+}
+.sec15 .schedule{
+    line-height: 1.9em;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-image: url(../img/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 10px;
+    background-position: right 10px center;
+}
+.sec15 .btn-reserve{
+    text-align: center;
+    margin: 100px auto 0;
+    width: 320px;
+    position: relative;
+    z-index: 0;
+}
+.sec15 .btn-reserve a{
+    color: #5A9388;
+    border: 2px solid #5A9388;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50em;
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+.sec15 .btn-reserve a:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #5A9388;
+    transition: .3s;
+}
+.sec15 .btn-reserve a:hover{
+    color: #fff;
+    transition: .3s;
+    border: 2px solid #5A9388;
+}
+.sec15 .btn-reserve a:hover:before{
+    left: 0;
+    transition: .3s;
+}
+.sec15 .btn-apply{
+    margin-top: 50px;
+    width: 240px;
+}
+.sec15 .btn-apply a{
+    color: #C6AB39;
+    border: 2px solid #C6AB39;
+}
+.sec15 .btn-apply a:before{
+    background-color: #C6AB39;
+}
+.sec15 .btn-apply a:hover{
+    border: 2px solid #C6AB39;
+}
+/*フッター*/
+footer{
+    width: 100vw;
+    margin-top: 100px;
+    background-color: #0A2F4B;
+    padding: 30px 0;
+    text-align: center;
+}
+footer p{
+    color: #fff;
+}
+/*追従ボタン*/
+.pagetop{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+.pagetop img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1023px){
+    .top-bg{
+        height: 80vh;
+    }
+    .space{
+        height: 80vh;
+    }
+    .top-btn{
+        top: 60vh;
+    }
+    .sec01 .box{
+        width: 33%;
+    }
+    .sec01 .box .text{
+        padding: 40px 20px;
+    }
+    .sec01 .box .text .strong{
+        font-size: 18px;
+    }
+    .sec02 .text br{
+        display: none;
+    }
+    .sec09 .box{
+        width: 46%;
+    }
+    .sec03 .flex-1 .text{
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 50vw;
+    }
+    .sec03 .flex-2 .text{
+        padding-right: 30px;
+        padding-right: 30px;
+        width: 50vw;
+    }
+    .sec03 .flex,.sec03 .flex .image{
+        height: 520px;
+    }
+    .sec03 .flex{
+        width: 100%;
+    }
+    .sec03 .flex-1,.sec03 .flex-2{
+        margin: 0 auto;
+    }
+    .sec11 .illust-1{
+        margin: 0 auto 0 -60px;
+        width: 180px;
+    }
+    .sec11 .illust-2{
+        margin: 0 -60px 0 auto;
+        width: 120px;
+    }
+}
+@media screen and (max-width: 840px){
+    .top-bg{
+        height: 900px;
+    }
+    .space{
+        height: 900px;
+    }
+    .top-inner{
+        display: block;
+    }
+    .top-text{
+        width: 90vw;
+    }
+    .top-text h1,.top-text .text{
+        text-align: center;
+    }
+    .top-text figure{
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .top-briefing{
+        width: 60vw;
+        margin: 60px auto;
+    }
+    .top-btn{
+        display: none;
+    }
+    .sec01 .flex{
+        display: block;
+    }
+    .sec01 .box{
+        width: 80%;
+        margin: 10px auto;
+    }
+    .sec01 .box figure{
+        width: 250px;
+        height: 250px;
+    }
+    .sec01 .box .text{
+        padding: 40px 10%;
+    }
+    .sec01 .box .text .strong br{
+        display: none;
+    }
+    .sec02 .skill{
+        width: 100%;
+        width: 100%;
+    }
+    .sec02 .skill-2,.sec02 .skill-3{
+        margin: 30px auto 0;
+    }
+    .sec02 .content .text{
+        width: 60vw;
+    }
+    .sec09 .arrow-box{
+        width: 210px;
+    }
+    .sec04 .flex{
+        display: block;
+    }
+    .sec04 .box{
+        width: 100vw;
+        margin: 0 auto;
+        padding: 50px 10%;
+    }
+    .sec05 .flex{
+        display: block;
+        margin: 100px auto;
+    }
+    .sec05 .flex .box{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sec05 .flex .box-2{
+        margin-top: 60px;
+    }
+    .common-flex{
+        display: block;
+        width: 100%;
+    }
+    .common-flex figure{
+        width: 100%;
+        height: 300px;
+    }
+    .common-flex .content{
+        width: 100%;
+    }
+    .sec08 .lecturer-sp{
+        display: block;
+    }
+    .sec08 .lecturer-pc{
+        display: none;
+    }
+.sec10 .flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.sec10 figure{
+    width: 70%;
+}
+.sec10 .content{
+    width: 30%;
+}
+.sec10 .h2{
+    width: 50vw;
+    margin-left: 0;
+}
+.sec10 .h2 h2{
+    color: #333;
+}
+.sec10 .content-inner{
+    width: 60vw;
+    margin-left: -40vw;
+}
+}
+@media screen and (max-width: 708px){
+    .sec14 .flow-line{
+        height: 680px;
+    }
+}
+@media screen and (max-width: 640px){
+    h1{
+        font-size: 26px;
+    }
+    .top .text p{
+        font-size: 16px;
+    }
+    .top .text strong{
+        font-size: 20px;
+    }
+    .sec02 .content .text{
+        width: 45vw;
+    }
+    .sec09 .flex{
+        display: block;
+    }
+    .sec09 .flex .box{
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    .sec09 .flex .box-2{
+        margin-top: 50px;
+    }
+    .sec03 .flex{
+        height: auto;
+        display: block;
+    }
+    .sec07 .content-inner{
+        flex-wrap: wrap;
+    }
+    .sec07 .title,.sec07 .text{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .sec07 .title{
+        text-align: left;
+        margin-top: 80px;
+    }
+    .sec07 .text{
+        margin-bottom: 80px;
+        margin-top: 50px;
+    }
+    .sec03 .flex .text,.sec03 .flex .image{
+        width: 100vw;
+    }
+    .sec03 .flex .text{
+        padding: 50px 5%;
+    }
+    .sec03 .image-pc{
+        display: none;
+    }
+    .sec03 .image-sp{
+        display: block;
+    }
+    .sec03 .flex-2 img{
+        transform: translateX(0%);
+        width: 100vw;
+    }
+    .sec10 .icon{
+        height: 170px;
+        padding: 20px;
+    }
+    .sec10 .icon img{
+        margin-top: 30px;
+    }
+    .sec11 .illust{
+        display: none;
+    }
+    .sec11 .flex{
+        display: block;
+    }
+    .sec11 .campaign{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .sec11 .inner-flex{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto 30px;
+    }
+    .sec11 .inner-flex .ca-1{
+        width: 220px;
+        height: auto;
+    }
+    .sec11 .inner-flex .ca-2{
+        width: 100px;
+        height: auto;
+    }
+    .sec11 .date{
+        width: 300px;
+    }
+    .sec11 .date p{
+        font-size: 20px;
+    }
+    .sec12 dl{
+        width: 380px;
+    }
+    .sec14 .text{
+        padding-left: 60px;
+    }
+    .sec14 .content{
+        width: 100%;
+    }
+    .sec14 .flow-line{
+        height: 600px;
+    }
+    .sec15 .form{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 414px){
+    .top-briefing{
+        width: 90vw;
+    }
+    .sec01-inner{
+        width: 100vw;
+    }
+    .sec01 .box figure{
+        width: 180px;
+        height: 180px;
+    }
+    .sec01 .box .text{
+        padding: 40px 5%;
+    }
+    .sec02 .content{
+        flex-wrap: wrap;
+    }
+    .sec02 .skill{
+        height: 340px;
+    }
+    .sec02 .skill-bg{
+        transform: none;
+    }
+    .sec02 h3{
+        padding-right: 20px;
+    }
+    .sec02 .text{
+        margin-top: 20px;
+    }
+    .sec08-inner,.sec06-inner{
+        width: 100vw;
+    }
+    .sec07-inner{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .sec07 .flex{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .sec07 .flex li a{
+        font-size: 22px;
+    }
+    .sec10 .content-inner{
+        width: 75vw;
+        margin-left: -50vw;
+    }
+    .sec11 h3 span{
+        font-size: 30px;
+    }
+    .sec11 h3 span strong{
+        font-size: 34px;
+    }
+    .sec11 h3 .br-sp{
+        display: block;
+    }
+    .sec11 .date p{
+        font-size: 16px;
+    }
+    .sec11 .date{
+        width: 220px;
+    }
+    .sec12 dl{
+        width: 280px;
+    }
+    .sec12 dt{
+        width: 80px;
+    }
+    .sec12 dd{
+        width: 200px;
+        margin-left: 80px;
+    }
+    .sec12 .btn-reserve{
+        width: 300px;
+    }
+    .sec14-inner{
+        width: 98vw;
+        margin: 0 auto;
+    }
+    .sec14 .text{
+        padding-left: 80px;
+    }
+    .sec14 .btn-reserve{
+        width: 180px;
+    }
+    .sec14 .flow-line{
+        height: 700px;
+    }
+    .sec15 .flex{
+        display: block;
+    }
+    .sec15 .title p{
+        width: 100vw;
+    }
+    .sec15 .form-area{
+        width: 80vw;
+    }
+}
