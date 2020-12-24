@@ -51,7 +51,8 @@ header{
 }
 .header-inner{
     line-height: 50px;
-    text-align: center;
+    text-align: left;
+    padding-left: 5vw;
 }
 .header-inner img{
     vertical-align: middle;
@@ -430,7 +431,10 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 50%;
+    object-position: 50% 50%;
+}
+.sec03 .flex .image-2 img{
+    object-position: 100% 50%;
 }
 .sec03 .flex-1{
     margin-left: 10vw;
@@ -840,6 +844,7 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 0 50%;
 }
 .sec10 .content{
     width: 50%;
@@ -1357,6 +1362,14 @@ footer p{
     }
 }
 @media screen and (max-width: 840px){
+    .header-inner{
+        line-height: 50px;
+        text-align: center;
+        padding-left: 0;
+    }
+    .top-text .text p{
+        padding-left: 0;
+    }
     .top-bg{
         height: 900px;
     }
@@ -1636,6 +1649,9 @@ footer p{
     .sec10 .content-inner{
         width: 75vw;
         margin-left: -50vw;
+    }
+    .sec10 .h2 h2{
+        color: #fff;
     }
     .sec11 h3 span{
         font-size: 30px;
